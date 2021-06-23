@@ -1,4 +1,4 @@
-const cpf = "705.484.450-52";
+const cpf = "110.384.334-60";
 let fator = 11;
 
 const limparString = (string, regra = "") => {
@@ -69,12 +69,11 @@ const getSegundoNumeroComProva = (cpf) => {
   return contaNumerosFinais(retornaDezSomado(cpf));
 };
 
+const primeiroNumero = getPrimeiroNumeroComProva(cpf).toString();
+const segundoNumero = getSegundoNumeroComProva(cpf).toString();
+
 const cpfValidator = (cpf) => {
-  if (
-    getPrimeiroNumeroComProva(cpf).toString() +
-      getSegundoNumeroComProva(cpf).toString() ===
-    doisUltimosDigitos(cpf)
-  ) {
+  if (primeiroNumero + segundoNumero === doisUltimosDigitos(cpf)) {
     return true;
   }
 
