@@ -1,4 +1,4 @@
-const cpf = "110.384.334-60";
+const cpf = "705.484.450.53";
 let fator = 11;
 
 const limparString = (string, regra = "") => {
@@ -76,7 +76,6 @@ const cpfValidator = (cpf) => {
   if (primeiroNumero + segundoNumero === doisUltimosDigitos(cpf)) {
     return true;
   }
-
   return false;
 };
 
